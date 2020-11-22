@@ -1,3 +1,6 @@
+import random
+
+
 class Hero:
     # We want our hero to have a default "starting_health",
     # so we can set that in the function header.
@@ -13,7 +16,15 @@ class Hero:
     # If you run this file from the terminal
     # this block is executed.
 
+    def fight(self, opponent):
+        heros = [self.name, opponent]
+        winnder = random.choice(heros)
+        print(f"{winnder} won!")
 
-my_hero = Hero("Grace Hopper", 200)
-print(my_hero.name)
-print(my_hero.current_health)
+
+if __name__ == "__main__":
+    my_hero = Hero("Grace Hopper", 200)
+    print(my_hero.name)
+    print(my_hero.current_health)
+
+    my_hero.fight('hero2')
