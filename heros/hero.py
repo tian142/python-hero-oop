@@ -1,5 +1,7 @@
 from ability import Ability
 from armor import Armor
+from weapon import Weapon
+
 
 import random
 
@@ -60,6 +62,9 @@ class Hero:
     def add_deaths(self, num_deaths=1):
         self.deaths += num_deaths
 
+    def add_weapon(self, weapon):
+        self.abilities.append(weapon)
+
     def fight(self, opponent):
         # Check if any of the Heroes can do damage
         if self.abilities.count == 0 and opponent.abilities.count == 0:
@@ -91,15 +96,7 @@ class Hero:
 if __name__ == "__main__":
     # If you run this file from the terminal
     # this block is executed.
-
-    hero1 = Hero("Wonder Woman")
-    hero2 = Hero("Dumbledore")
-    ability1 = Ability("Super Speed", 300)
-    ability2 = Ability("Super Eyes", 130)
-    ability3 = Ability("Wizard Wand", 300)
-    ability4 = Ability("Wizard Beard", 130)
-    hero1.add_ability(ability1)
-    hero1.add_ability(ability2)
-    hero2.add_ability(ability3)
-    hero2.add_ability(ability4)
-    hero1.fight(hero2)
+    hero = Hero("Wonder Woman")
+    weapon = Weapon("Lasso of Truth", 90)
+    hero.add_weapon(weapon)
+    print(hero.attack())
