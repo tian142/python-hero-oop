@@ -25,7 +25,6 @@ class Team:
         self.heroes.append(hero)
 
     def stats(self):
-        '''Print team statistics'''
         for hero in self.heroes:
             if hero.deaths != 0 and hero.kills != 0:
                 kd = str(hero.kills / hero.deaths)

@@ -94,8 +94,6 @@ class Hero:
 
 
 if __name__ == "__main__":
-    # If you run this file from the terminal
-    # this block is executed.
     hero = Hero("Wonder Woman")
     weapon = Weapon("Lasso of Truth", 90)
     hero.add_weapon(weapon)
